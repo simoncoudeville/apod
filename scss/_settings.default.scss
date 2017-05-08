@@ -129,8 +129,8 @@ $beta-font-weight                   : 700 !default;
 
 $alpha-line-height                  : 1.5 !default;
 
-$alpha-leading                      : 1 !default;
-$beta-leading                       : 2 !default;
+$alpha-leading                      : $alpha-line-height * .75 !default;
+$beta-leading                       : $alpha-line-height * 1.5 !default;
 
 // ---
 // UI
@@ -229,6 +229,9 @@ $body-selection-text-shadow         : none !default;
 // Typography
 // ---
 
+// set to false to hide the baseline and backround
+$show-baseline: false;
+
 $h1-font-family                     : $alpha-font-family !default;
 $h1-font-weight                     : $alpha-font-weight !default;
 $h1-font-size                       : $ms6 !default;
@@ -267,7 +270,7 @@ $h6-margin-bottom                   : $alpha-leading !default;
 
 $base-font-size                     : $alpha-font-size !default;
 $base-line-height                   : 1 !default;
-$base-margin-bottom                 : $beta-leading !default;
+$base-margin-bottom                 : $alpha-leading !default;
 $base-indent                        : 2 !default;
 
 $blockquote-font-style              : italic !default;
