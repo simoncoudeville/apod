@@ -64,3 +64,25 @@ a {
 .u-max-width-lg {
     max-width: 56em;
 }
+
+.c-main-section {
+    @include mq(bp2) {
+        & + & {
+            @include padding-top($alpha-leading);
+        }
+    }
+}
+
+.c-main-section-lg {
+    @include mq(bp2) {
+        & + & {
+            @include padding-top($alpha-leading);
+        }
+    }
+
+    @include mq(bp3) {
+        & + & {
+            @include padding-top($alpha-leading * 3);
+        }
+    }
+}

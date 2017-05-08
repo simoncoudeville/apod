@@ -20,7 +20,8 @@
     -moz-osx-font-smoothing: grayscale; /* [2] */
     background-color: palette(color-neutral,x-light);
     border-radius: $radius;
-    border: $border-width $border-style palette(color-neutral);
+    //border: $border-width $border-style palette(color-neutral);
+    border: 0;
     color: palette(color-neutral,dark);
     font-family: $alpha-font-family;
     margin: 0;
@@ -28,6 +29,7 @@
     display: block;
     outline: none;
     line-height: normal;
+    box-shadow: 0 0 0 1px palette(color-neutral,light);
 
     &:focus {
         color: palette(color-neutral,dark);
@@ -52,7 +54,7 @@
 }
 
 .c-input-text--md {
-    @include padding-lr(.75,.75);
+    @include padding-lr($columns-gutter,$columns-gutter);
     @include input-dimensions($ms-1,1,0,.75,.75);
 }
 

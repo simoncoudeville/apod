@@ -12,19 +12,20 @@
 
     @include mq(bp2) {
         @include padding-lr($columns-gutter * 2,$columns-gutter * 2);
+        @include padding-tb($alpha-leading * 2,$alpha-leading);
     }
 }
 
 .c-row--lg {
-    @include padding-tb($alpha-leading * 2,$alpha-leading);
-    @include padding-tb($alpha-leading * 4,$alpha-leading * 3);
+    @include mq(bp3) {
+        @include padding-tb($alpha-leading * 4,$alpha-leading * 3);
+    }
 }
 
 .c-row--alpha {
     background-color: palette(color-neutral,x-light);
 
     & + & {
-        //border-top: 1px solid palette(color-neutral,light);
         &:before {
             content: '';
             display: block;
@@ -39,8 +40,7 @@
 }
 
 .c-row--beta {
-    color: palette(color-neutral,light);
-    background-color: palette(color-neutral,dark);
+    background-color: palette(color-neutral,light);
 }
 
 .c-row--top {
@@ -51,16 +51,14 @@
 
 .c-row--header {
     background-color: palette(color-neutral,x-light);
-    //border-bottom: 1px solid palette(color-neutral,light);
-    box-shadow: 0 0 50px rgba(palette(color-neutral,x-dark),.1);
+    //box-shadow: 0 0 50px rgba(palette(color-neutral,x-dark),.1);
     z-index: 20;
-    @include padding-tb($alpha-leading * 2,$alpha-leading);
+    @include mq(bp2) {
+        @include padding-tb($alpha-leading * 2,$alpha-leading);
+    }
 }
 
 .c-row--intro {
     z-index: 10;
-    //min-height: $alpha-leading * 30rem;
-    //display: flex;
-    //align-items: center;
-    @include padding-tb($alpha-leading * 12,$alpha-leading * 11);
+    @include padding-tb($alpha-leading * 10,$alpha-leading * 11);
 }

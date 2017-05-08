@@ -8,7 +8,7 @@
     width: 100%;
     display: none;
 
-    @include mq(bp3) {
+    @include mq(bp4) {
         display: block;
         width: auto;
     }
@@ -19,7 +19,7 @@
 }
 
     .c-nav-main__list {
-        @include mq(bp3) {
+        @include mq(bp4) {
             justify-content: flex-end;
             display: flex;
             align-items: center;
@@ -28,7 +28,13 @@
     }
 
     .c-nav-main__item {
-        @include mq(bp3) {
+        @include mq(bp4) {
+            & + & {
+                @include margin-left($columns-gutter);
+            }
+        }
+
+        @include mq(bp5) {
             & + & {
                 @include margin-left($columns-gutter * 2);
             }
@@ -51,58 +57,62 @@
 .c-nav-main-trigger {
     user-select: none;
     position: absolute;
-    top: 2em;
-    right: 1em;
-    display: block;
-    color: palette(color-alpha);
-    background-color: palette(color-neutral,x-light);
-    border: 1px solid palette(color-alpha);
+    top: $alpha-leading * 1rem;
+    right: $columns-gutter * 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: palette(color-neutral,dark);
+    background-color: transparent;
+    //background-color: palette(color-neutral,light);
+    border: 0;
     outline: 0;
-    border-radius: $radius;
+    padding: 0;
+    width: 1.5em;
+    height: 1.5em;
 
     &.is-active {
-        color: palette(color-neutral,x-light);
-        background-color: palette(color-alpha);
+        color: palette(color-neutral,dark);
+        //background-color: palette(color-alpha);
     }
 
-    @include mq(bp3) {
+    @include mq(bp2) {
+        top: $alpha-leading * 2rem;
+        right: $columns-gutter * 2rem;
+    }
+
+    @include mq(bp4) {
         display: none;
     }
 }
 
+    .c-nav-main-trigger__symbol {
+        width: 1.5em;
+        height: 1.5em;
+    }
+
 // top navigation
 
 .c-nav-top {
-    width: 100%;
-    display: none;
-
-    @include mq(bp3) {
-        display: block;
-        width: auto;
-    }
-
-    &.is-visible {
-        display: block;
-    }
+    margin-bottom: 0;
 }
 
     .c-nav-top__list {
         margin-bottom: 0;
 
-        @include mq(bp3) {
+
             justify-content: flex-end;
             display: flex;
             align-items: center;
             flex-wrap: wrap;
-        }
     }
 
     .c-nav-top__item {
-        @include mq(bp3) {
+
             & + & {
                 @include margin-left($columns-gutter);
             }
-        }
+
     }
 
     .c-nav-top__link {
@@ -120,18 +130,7 @@
 // language navigation
 
 .c-nav-lang {
-    width: 100%;
-    display: none;
     margin-bottom: 0;
-
-    @include mq(bp3) {
-        display: block;
-        width: auto;
-    }
-
-    &.is-visible {
-        display: block;
-    }
 }
 
     .c-nav-lang__list {

@@ -1,0 +1,37 @@
+/*
+    Components: Media
+*/
+
+.c-media {
+    display: flex;
+    flex-direction: column;
+    @include margin-bottom($alpha-leading);
+}
+
+    .c-media__body {
+        background-color: palette(color-neutral,light);
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        @include padding-tb($alpha-leading * 1,$alpha-leading * 0);
+        @include padding-lr($columns-gutter);
+
+        @include mq(bp2) {
+            @include padding-tb($beta-leading,$alpha-leading);
+            @include padding-lr($columns-gutter * 2);
+        }
+    }
+
+    .c-media__content {
+        margin-top: auto;
+    }
+
+    .c-media__image-link {
+        display: block;
+    }
+
+    .c-media__image {
+        background-size: cover;
+        background-position: 50% 50%;
+        height: $alpha-line-height * 12rem;
+    }

@@ -242,7 +242,7 @@ $h1-line-height                     : 2 !default;
 $h1-margin-bottom                   : $alpha-leading !default;
 
 $h2-font-family                     : $alpha-font-family !default;
-$h2-font-weight                     : $alpha-font-weight !default;
+$h2-font-weight                     : $beta-font-weight !default;
 $h2-font-size                       : $ms4 !default;
 $h2-line-height                     : 1.5 !default;
 $h2-margin-bottom                   : $alpha-leading !default;
@@ -250,13 +250,13 @@ $h2-margin-bottom                   : $alpha-leading !default;
 $h3-font-family                     : $alpha-font-family !default;
 $h3-font-weight                     : $beta-font-weight !default;
 $h3-font-size                       : $ms0 !default;
-$h3-line-height                     : 1.25 !default;
+$h3-line-height                     : 1 !default;
 $h3-margin-bottom                   : $alpha-leading !default;
 
 $h4-font-family                     : $alpha-font-family !default;
-$h4-font-weight                     : $alpha-font-weight !default;
-$h4-font-size                       : $ms2 !default;
-$h4-line-height                     : 1.25 !default;
+$h4-font-weight                     : $beta-font-weight !default;
+$h4-font-size                       : $ms0 !default;
+$h4-line-height                     : 1 !default;
 $h4-margin-bottom                   : $alpha-leading !default;
 
 $h5-font-family                     : $alpha-font-family !default;

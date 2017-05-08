@@ -12,13 +12,15 @@ description: 'Mylene.eu'
 
 # Site navigation
 navigation:
-  - title: Homeparties
+  - title: Homeparty organiseren
     url: '#!'
   - title: Consulente worden
     url: '#!'
-  - title: Over Mylene
-    url: '#!'
   - title: Blog
+    url: '#!'
+  - title: Evenementen
+    url: '#!'
+  - title: Over Mylene
     url: '#!'
   - title: Contact
     url: '#!'

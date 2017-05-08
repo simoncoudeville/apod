@@ -1,0 +1,10 @@
+/*
+    Components: Header
+*/
+
+.c-header {
+    @include mq(bp4) {
+        display: flex;
+        justify-content: space-between;
+    }
+}

@@ -44,5 +44,23 @@ section: home
 </div>
 <div class="c-row c-row--lg c-row--alpha">
     <div class="o-container">
+        <div class="c-main-section-lg">
+            <h2 class="u-text-center">Laatste blogberichten</h2>
+        </div>
+        <div class="c-main-section-lg">
+            <div class="o-grid o-grid--gutter o-flex o-flex--wrap">
+                {% for item in site.data.posts limit:3 %}
+                    {% include atom.blog-article.html %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="c-row c-row--lg c-row--alpha">
+    <div class="o-container">
+        <div class="u-max-width-md u-align-horizontal">
+            {% include components.subscribe.html %}
+
+        </div>
     </div>
 </div>
