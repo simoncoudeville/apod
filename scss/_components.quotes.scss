@@ -1,0 +1,23 @@
+/*
+    Components: Quotes
+*/
+
+.c-quote {
+    position: relative;
+    text-align: center;
+}
+
+    .c-quote__text {
+        @include ms4;
+    }
+
+    .c-quote__avatar {
+        height: $alpha-line-height * 3.5rem;
+        width: $alpha-line-height * 3.5rem;
+        border-radius: 100%;
+        @include margin-bottom($alpha-leading)
+    }
+
+    .c-quote__name {
+        margin-bottom: 0;
+    }

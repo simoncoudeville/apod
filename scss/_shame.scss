@@ -5,11 +5,14 @@
 */
 
 html {
+    position: relative;
+
     @if $show-baseline {
         &:after {
             content: '';
             display: block;
             position: absolute;
+            z-index: 100;
             top: 0;
             right: 0;
             bottom: 0;
@@ -30,4 +33,34 @@ a {
     @if $show-baseline {
         background-color: rgba(red,.1);
     }
+}
+
+.c-visual {
+    display: block;
+    //border: 1px solid palette(color-neutral,light);
+    background-color: palette(color-neutral,light);
+    @include margin-bottom($alpha-leading);
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+    .c-visual__body {
+        text-align: center;
+        //@include padding-tb($alpha-leading * 2,$alpha-leading);
+        @include padding-tb($alpha-leading * 4,$alpha-leading * 3);
+        @include padding-lr($columns-gutter);
+    }
+
+    .c-visual__label {
+        margin-bottom: 0;
+    }
+
+.u-max-width-md {
+    max-width: 36em;
+}
+
+.u-max-width-lg {
+    max-width: 56em;
 }

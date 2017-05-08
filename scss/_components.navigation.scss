@@ -6,14 +6,11 @@
 
 .c-nav-main {
     width: 100%;
-    float: left;
     display: none;
-    font-family: $alpha-font-family;
 
     @include mq(bp3) {
         display: block;
         width: auto;
-        float: right;
     }
 
     &.is-visible {
@@ -22,10 +19,8 @@
 }
 
     .c-nav-main__list {
-        border-top: 1px dotted palette(color-neutral,light);
-
         @include mq(bp3) {
-            border-top: 0;
+            justify-content: flex-end;
             display: flex;
             align-items: center;
             flex-wrap: wrap;
@@ -33,15 +28,9 @@
     }
 
     .c-nav-main__item {
-        & + & {
-            border-top: 1px dotted palette(color-neutral,light);
-        }
-
         @include mq(bp3) {
-
             & + & {
-                border-top: 0;
-                @include margin-lr(2,0);
+                @include margin-left($columns-gutter * 2);
             }
         }
     }
@@ -80,3 +69,99 @@
         display: none;
     }
 }
+
+// top navigation
+
+.c-nav-top {
+    width: 100%;
+    display: none;
+
+    @include mq(bp3) {
+        display: block;
+        width: auto;
+    }
+
+    &.is-visible {
+        display: block;
+    }
+}
+
+    .c-nav-top__list {
+        margin-bottom: 0;
+
+        @include mq(bp3) {
+            justify-content: flex-end;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+    }
+
+    .c-nav-top__item {
+        @include mq(bp3) {
+            & + & {
+                @include margin-left($columns-gutter);
+            }
+        }
+    }
+
+    .c-nav-top__link {
+        display: block;
+        color: palette(color-alpha);
+        text-decoration: none;
+        @include text-dimensions($ms-1,1);
+
+        &:hover,
+        .is-selected & {
+            color: palette(color-alpha,dark);
+        }
+    }
+
+// language navigation
+
+.c-nav-lang {
+    width: 100%;
+    display: none;
+    margin-bottom: 0;
+
+    @include mq(bp3) {
+        display: block;
+        width: auto;
+    }
+
+    &.is-visible {
+        display: block;
+    }
+}
+
+    .c-nav-lang__list {
+        margin-bottom: 0;
+
+        @include mq(bp3) {
+            justify-content: flex-end;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+    }
+
+    .c-nav-lang__item {
+        @include mq(bp3) {
+            & + & {
+                @include margin-left($columns-gutter);
+            }
+        }
+    }
+
+    .c-nav-lang__link {
+        display: block;
+        color: palette(color-alpha);
+        text-decoration: none;
+        //text-transform: uppercase;
+        @include text-dimensions($ms-1,1);
+
+        &:hover,
+        .is-selected & {
+            color: palette(color-alpha,dark);
+        }
+    }

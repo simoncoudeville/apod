@@ -5,15 +5,62 @@
 */
 
 .c-row {
+    position: relative;
     @include padding-tb($alpha-leading,0);
     @include padding-lr($columns-gutter,$columns-gutter);
+    @include clearfix;
+
+    @include mq(bp2) {
+        @include padding-lr($columns-gutter * 2,$columns-gutter * 2);
+    }
+}
+
+.c-row--lg {
+    @include padding-tb($alpha-leading * 2,$alpha-leading);
+    @include padding-tb($alpha-leading * 4,$alpha-leading * 3);
 }
 
 .c-row--alpha {
     background-color: palette(color-neutral,x-light);
+
+    & + & {
+        //border-top: 1px solid palette(color-neutral,light);
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            height: 1px;
+            background-color: palette(color-neutral,light);
+        }
+    }
 }
 
 .c-row--beta {
     color: palette(color-neutral,light);
     background-color: palette(color-neutral,dark);
+}
+
+.c-row--top {
+    background-color: palette(color-neutral,light);
+    z-index: 30;
+    @include padding-tb($alpha-leading / 2, $alpha-leading / 2);
+}
+
+.c-row--header {
+    background-color: palette(color-neutral,x-light);
+    //border-bottom: 1px solid palette(color-neutral,light);
+    box-shadow: 0 0 50px rgba(palette(color-neutral,x-dark),.1);
+    z-index: 20;
+    @include padding-tb($alpha-leading * 2,$alpha-leading);
+}
+
+.c-row--intro {
+    z-index: 10;
+    //min-height: $alpha-leading * 30rem;
+    //display: flex;
+    //align-items: center;
+    @include padding-tb($alpha-leading * 12,$alpha-leading * 11);
 }
