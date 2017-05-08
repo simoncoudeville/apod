@@ -12,9 +12,15 @@ description: 'Mylene.eu'
 
 # Site navigation
 navigation:
-  - title: test
+  - title: Homeparties
     url: '#!'
-  - title: test
+  - title: Consulente worden
+    url: '#!'
+  - title: Over Mylene
+    url: '#!'
+  - title: Blog
+    url: '#!'
+  - title: Contact
     url: '#!'
 
 # Jekyll settings
