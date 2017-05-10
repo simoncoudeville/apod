@@ -1,21 +1,21 @@
 <article class="o-grid__item u-1-of-3-bp4 o-flex">
-    <div class="c-media">
-        <a class="c-media__image-link" href="#!" title="{{ item.title }}">
+    <a class="c-media c-media--link" href="#!">
+
             <div class="c-media__image" style="background-image: url('{{ item.image }}')">
             </div>
-        </a>
+
         <div class="c-media__body">
             <p class="c-media__meta u-ms-1 u-color-neutral-base">
                 {{ item.date }}
             </p>
             <div class="c-media__content">
                 <h2 class="c-media__title u-ms1">
-                    <a href="#!">{{ item.title }}</a>
+                    {{ item.title }}
                 </h2>
-                <p>
+                <p class="c-media__intro">
                     {{ item.text }}
                 </p>
             </div>
         </div>
-    </div>
+    </a>
 </article>
