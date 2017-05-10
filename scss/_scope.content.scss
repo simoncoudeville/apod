@@ -1,0 +1,35 @@
+/*
+    Scope: Content
+    ---
+    Targetting elements with .s-content
+*/
+
+.s-content {
+    h1,
+    h2,
+    h3 {
+        color: palette(color-neutral,xxxx-dark);
+    }
+
+    h3 {
+        //@include uppercase;
+    }
+
+    * + h2 {
+        @include padding-top($alpha-leading);
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    //h1,
+    //h2,
+    //h3 {
+    //    color: palette(color-neutral,xx-dark);
+    //}
+    //
+    //h3 {
+    //    @include uppercase;
+    //}
+}

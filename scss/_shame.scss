@@ -29,7 +29,7 @@ h1,
 h2,
 h3,
 p,
-a {
+li {
     @if $show-baseline {
         background-color: rgba(red,.1);
     }
@@ -38,7 +38,7 @@ a {
 .c-visual {
     display: block;
     //border: 1px solid palette(color-neutral,light);
-    background-color: palette(color-neutral,light);
+    background-color: palette(color-neutral,xxx-light);
     @include margin-bottom($alpha-leading);
 
     &:hover {
@@ -57,18 +57,56 @@ a {
         margin-bottom: 0;
     }
 
+.u-max-width-sm {
+    max-width: 30em;
+}
+
 .u-max-width-md {
-    max-width: 36em;
+    max-width: 38em;
 }
 
 .u-max-width-lg {
-    max-width: 56em;
+    max-width: 58em;
+}
+
+.u-max-width-xl {
+    max-width: 68em;
+}
+
+.u-opacity-alpha {
+    opacity: .6;
+}
+
+.u-opacity-beta {
+    opacity: .7;
+}
+
+.u-opacity-gamma {
+    opacity: .8;
+}
+
+.u-opacity-delta {
+    opacity: .9;
 }
 
 .c-main-section {
     @include mq(bp2) {
         & + & {
             @include padding-top($alpha-leading);
+        }
+    }
+}
+
+.c-main-section-md {
+    @include mq(bp2) {
+        & + & {
+            @include padding-top($alpha-leading);
+        }
+    }
+
+    @include mq(bp3) {
+        & + & {
+            @include padding-top($alpha-leading * 2);
         }
     }
 }
@@ -86,3 +124,115 @@ a {
         }
     }
 }
+
+.c-main-section-xl {
+    @include mq(bp2) {
+        & + & {
+            @include padding-top($alpha-leading);
+        }
+    }
+
+    @include mq(bp3) {
+        & + & {
+            @include padding-top($alpha-leading * 3);
+        }
+    }
+
+    @include mq(bp5) {
+        & + & {
+            @include padding-top($alpha-leading * 5);
+        }
+    }
+}
+
+.c-subscribe {
+    position: relative;
+}
+
+.c-subscribe__button {
+    position: absolute;
+    top: .375rem;
+    right: .375rem;
+    //top: .625rem;
+    //right: .625rem;
+    //border-top-left-radius: $radius * 4;
+    //border-bottom-left-radius: $radius * 4;
+}
+
+.c-bg-marble-dark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background:  url('../img/textures/15_slab_marble_marquina_black_texture-seamless.jpg') 0 0 repeat;
+    background-size: 500px 500px;
+    opacity: .25;
+    //z-index: 1;
+}
+
+.c-bg-marble-light {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background:  url('../img/textures/5_slab_marble_veined_Carrara_white_texture-seamless.jpg') 0 0 repeat;
+    background-size: 500px 500px;
+    opacity: .25;
+    //z-index: 1;
+}
+
+.c-bg-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.o-container {
+    position: relative;
+}
+
+::-webkit-input-placeholder {
+    font-family: $placeholder-font-family;
+    font-style: $placeholder-font-style;
+    font-weight: $alpha-font-weight;
+    color: $placeholder-color;
+}
+
+::-moz-placeholder {
+    font-family: $placeholder-font-family;
+    font-style: $placeholder-font-style;
+    font-weight: $alpha-font-weight;
+    color: $placeholder-color;
+}
+
+:-ms-input-placeholder {
+    font-family: $placeholder-font-family;
+    font-style: $placeholder-font-style;
+    font-weight: $alpha-font-weight;
+    color: $placeholder-color;
+}
+
+.c-intro {
+    background-color: #fff;
+    //display: flex;
+    //align-items: center;
+    //min-height: $alpha-leading * 20rem;
+    @include margin-bottom($alpha-leading);
+    @include box-shadow;
+}
+
+    .c-intro__body {
+        @include padding-tb($alpha-leading * 1,$alpha-leading * 0);
+        @include padding-lr($columns-gutter);
+
+        @include mq(bp2) {
+            @include padding-tb($beta-leading,$alpha-leading);
+            @include padding-lr($columns-gutter * 2);
+        }
+    }

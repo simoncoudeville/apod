@@ -1,0 +1,15 @@
+/*
+    Utilities: Spacing
+    ---
+    Utility classes for spacing
+*/
+
+// Loop through the increments map and get the value.
+@each $increment, $value in $increments {
+
+    // Negative Increment utility class (e.g. .u-mb-alpha-neg)
+    .u-mb-#{$increment}-neg {
+        @include margin-bottom($value * -1);
+    }
+
+}

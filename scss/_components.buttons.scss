@@ -30,13 +30,15 @@
     border-width: 0;
     transition-duration: $animation-duration-alpha;
     transition-timing-function: $animation-easing-alpha;
-    transition-property: background, color, border;
+    transition-property: background, color, border, transform;
     outline: none;
     //line-height: normal;
     appearance: none;
     box-shadow: none;
     -webkit-font-smoothing: antialiased; /* [4] */
     -moz-osx-font-smoothing: grayscale; /* [4] */
+    font-weight: $gamma-font-weight;
+    @include uppercase;
 
     &:hover,
     &:focus {
@@ -54,6 +56,12 @@
         color: palette(color-neutral);
         border: palette(color-neutral);
     }
+}
+
+// rounded
+
+.c-button--rounded {
+    border-radius: 4rem;
 }
 
 // Button display
@@ -84,60 +92,192 @@
 // Button sizes
 
 .c-button--sm {
-    @include padding-lr(.75,.75);
+    @include padding-lr($columns-gutter,$columns-gutter);
     @include input-dimensions($ms-2,1,0,.5,.5);
 }
 
 .c-button--md {
-    @include padding-lr(1,1);
-    @include input-dimensions($ms-1,1,0,.75,.75);
+    @include padding-lr($columns-gutter * 1.3,$columns-gutter * 1.2);
+    @include input-dimensions($ms-1,1,0,.8,.7);
 }
 
 .c-button--lg {
-    @include padding-lr($columns-gutter * 1.5,$columns-gutter * 1.5);
-    @include input-dimensions($alpha-font-size,1,0,$alpha-leading,$alpha-leading);
+    @include padding-lr($columns-gutter * 2,$columns-gutter * 2);
+    @include input-dimensions($ms-1,1,0,$alpha-leading,$alpha-leading);
 }
 
 // Button colors
 
-.c-button--alpha {
-    background-color: palette(color-alpha);
-    border-color: palette(color-alpha);
+.c-button--beta {
+    background-color: palette(color-beta,light);
+    border-color: palette(color-beta,light);
 
     &,
     &:visited {
-        color: palette(color-neutral,x-light);
+        color: palette(color-neutral,xxxxx-light);
     }
 
     &:hover,
     &:focus {
-        background-color: palette(color-alpha,light);
-        color: palette(color-neutral,x-light);
+        background-color: palette(color-beta);
+        color: palette(color-neutral,xxxxx-light);
     }
 
     &:active {
-        background-color: palette(color-alpha);
+        background-color: palette(color-beta);
     }
 
 }
 
-.c-button--beta {
-    background-color: palette(color-beta);
-    border-color: palette(color-beta);
+.c-button--gamma {
+    background-color: palette(color-gamma,light);
+    border-color: palette(color-gamma,light);
 
     &,
     &:visited {
-        color: palette(color-neutral,x-light);
+        color: palette(color-neutral,xxxxx-light);
+    }
+
+    &:hover,
+    &:focus {
+        background-color: palette(color-gamma);
+        color: palette(color-neutral,xxxxx-light);
+    }
+
+    &:active {
+        background-color: palette(color-gamma);
+    }
+}
+
+.c-button--delta {
+    background-color: palette(color-delta,light);
+    border-color: palette(color-delta,light);
+
+    &,
+    &:visited {
+        color: palette(color-neutral,xxxxx-light);
+    }
+
+    &:hover,
+    &:focus {
+        background-color: palette(color-delta);
+        color: palette(color-neutral,xxxxx-light);
+    }
+
+    &:active {
+        background-color: palette(color-delta);
+    }
+}
+
+// Negative
+
+.c-button--beta-negative {
+    background-color: white;
+    border-color: white;
+
+    &,
+    &:visited {
+        color: palette(color-beta,light);
     }
 
     &:hover,
     &:focus {
         background-color: palette(color-beta,light);
-        color: palette(color-neutral,x-light);
+        border-color: palette(color-beta,light);
+        color: white;
     }
 
     &:active {
-        background-color: palette(color-beta);
+        background-color: palette(color-beta,light);
+        border-color: palette(color-beta,light);
+    }
+
+}
+
+.c-button--beta-ghost {
+    background-color: white;
+    box-shadow: inset 0 0 0 2px palette(color-beta,light);
+
+    &,
+    &:visited {
+        color: palette(color-beta,light);
+    }
+
+    &:hover,
+    &:focus {
+        background-color: palette(color-beta,light);
+        border-color: palette(color-beta,light);
+        color: white;
+    }
+
+    &:active {
+        background-color: palette(color-beta,light);
+        border-color: palette(color-beta,light);
+    }
+
+}
+
+.c-button--gamma-negative {
+    background-color: white;
+    border-color: white;
+
+    &,
+    &:visited {
+        color: palette(color-gamma,light);
+    }
+
+    &:hover,
+    &:focus {
+        background-color: palette(color-gamma,light);
+        border-color: palette(color-gamma,light);
+        color: white;
+        //color: palette(color-gamma,light,dark);
+    }
+
+    &:active {
+        background-color: palette(color-gamma,light);
+        border-color: palette(color-gamma,light);
+    }
+}
+
+.c-button--delta-negative {
+    background-color: white;
+    border-color: white;
+
+    &,
+    &:visited {
+        color: palette(color-delta,light);
+    }
+
+    &:hover,
+    &:focus {
+        background-color: palette(color-delta,light);
+        border-color: palette(color-delta,light);
+        color: white;
+    }
+
+    &:active {
+        background-color: palette(color-delta,light);
+        border-color: palette(color-delta,light);
+    }
+}
+
+// With box-shadow
+
+.c-button--box-shadow {
+    box-shadow: 0 5px 15px rgba(palette(color-neutral,xxx-dark),.1);
+}
+
+
+// effects
+
+.c-button--scale {
+    &:focus {
+        transform: scale(1);
+    }
+
+    &:active {
+        transform: scale(.975);
     }
 }
 
@@ -150,6 +290,11 @@
 // Button-group
 
 .c-button-group {
-    position: relative;
-    @include clearfix;
+    display: flex;
+    flex-wrap: wrap;
+    @include margin-lr($columns-gutter * -1);
+
+    .c-button {
+        @include margin-lr($columns-gutter);
+    }
 }

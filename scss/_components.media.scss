@@ -5,11 +5,18 @@
 .c-media {
     display: flex;
     flex-direction: column;
+    box-shadow: 0 5px 15px rgba(palette(color-neutral,xxx-dark),.1);
+    transition: all $animation-duration-beta $animation-easing-alpha;
     @include margin-bottom($alpha-leading);
+
+    &:hover {
+        transform: scale(1.015) translateY(-4px);
+        box-shadow: 0 10px 20px rgba(palette(color-neutral,xxx-dark),.075);
+    }
 }
 
     .c-media__body {
-        background-color: palette(color-neutral,light);
+        background-color: palette(color-neutral,xxxxx-light);
         display: flex;
         flex-direction: column;
         flex: 1;

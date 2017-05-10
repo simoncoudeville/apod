@@ -1,0 +1,31 @@
+/*
+    Component: typography
+    ---
+    Special typography classes
+*/
+
+.c-type-subheader {
+    font-weight: $beta-font-weight;
+    opacity: .75;
+    @include uppercase-wide;
+}
+
+.c-type-header {
+    font-weight: $gamma-font-weight;
+    @include uppercase;
+}
+
+.c-type-header-wide {
+    font-weight: $gamma-font-weight;
+    @include uppercase-wide;
+}
+
+.c-type-caption {
+    color: palette(color-neutral,light);
+    @include ms-1;
+}
+
+.c-type-typewriter {
+    font-family: $beta-font-family;
+    font-weight: $beta-font-weight;
+}

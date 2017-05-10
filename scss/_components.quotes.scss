@@ -4,20 +4,31 @@
 
 .c-quote {
     position: relative;
-    text-align: center;
+    //text-align: center;
 }
 
     .c-quote__text {
+        font-family: $beta-font-family;
+        color: palette(color-gamma,light);
         @include ms4;
+    }
+
+    .c-quote__author {
+        display: flex;
+        align-items: center;
     }
 
     .c-quote__avatar {
         height: $alpha-line-height * 3.5rem;
         width: $alpha-line-height * 3.5rem;
         border-radius: 100%;
+        @include margin-right($columns-gutter);
         @include margin-bottom($alpha-leading)
     }
 
     .c-quote__name {
         margin-bottom: 0;
+        //@include ms3;
+        //@include ms-1;
+        //@include uppercase-wide;
     }

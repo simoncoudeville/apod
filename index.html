@@ -1,66 +1,109 @@
 ---
-layout: default
-title: Homepage
-section: home
+layout: collage
+title: Element Collage
 ---
-
+<div class="c-row c-row--lg c-row--alpha">
+    <div class="o-container">
+        {% include atoms.colors.html %}
+    </div>
+</div>
+<div class="c-row c-row--lg c-row--alpha">
+    <div class="o-container">
+        <div class="c-main-section">
+            <div class="u-max-width-lg u-align-horizontal u-text-center">
+                <h3 class="c-type-header-wide u-ms-1 u-color-neutral-light">Typography</h3>
+                <h1 class="u-color-gamma-light u-ms4 u-ms8-bp3">
+                    Onze nieuwe handverzorgingscollectie: de ultieme luxe voor je handen
+                </h1>
+            </div>
+        </div>
+        {% comment %}
+        <div class="c-main-section">
+            <div class="u-max-width-xl u-align-horizontal">
+                <p>
+                    <img src="img/jpg/post-8.jpg" alt="">
+                </p>
+            </div>
+        </div>
+        {% endcomment %}
+        <div class="c-main-section">
+            <div class="u-max-width-md u-align-horizontal s-content">
+                <p class="u-ms1 u-color-neutral-base">
+                    Kunnen je handen wel wat extra aandacht gebruiken in deze tijd van het jaar? Dat komt dan goed uit,  want onze handverzorgingscollectie is geheel vernieuwd en uitgebreid met een paar nieuwe producten. In deze blog lees je hoe je je hardwerkende handen kunt verwennen met je favoriete Rituals.
+                </p>
+                <h2>
+                     Heel gevoelig voor de zon
+                </h2>
+                <p>
+                    The Ritual of Ayurveda staat in het teken van innerlijke harmonie en is verrijkt met Indiase Roos en Himalayahoning. Pure verwennerij voor je handen! De eerste nieuwkomer is <a href="#!">The Ritual of Ayurveda handlotion</a>, een heerlijke handlotion die onmisbaar is in je handtas om je handen onderweg snel te hydrateren.
+                </p>
+                <h3>
+                    Vrij bestendige huid
+                </h3>
+                <p>
+                    De romige formule van The Ritual of Ayurveda handbalsem, voorheen Ginkgo’s Secret handbalsem, zal zeker in de smaak vallen bij trouwe Rituals-fans. De balsem is ideaal voor droge handen en houdt de huid soepel. Masseer ‘m elke dag in je huid en nagelriemen om je handen te hydrateren en verzorgen.
+                </p>
+                <p>
+                    De bestseller Miracle Scrub heet tegenwoordig <a href="#!">The Ritual of Ayurveda handscrub</a>. Deze scrub herstelt de vochtbalans en soepelheid van de huid. Onze ultieme tip om je handen te verzorgen: geef je handen vlak voor je naar bed gaat een lekkere scrubbeurt en gebruik daarna de handbalsem. De volgende ochtend voelen je handen heerlijk zacht aan.
+                </p>
+            </div>
+        </div>
+        <div class="c-main-section">
+            <div class="u-max-width-md u-align-horizontal">
+                {% include atom.quote.html text="Nooit gedacht dat mijn eigen zaak starten zo eenvoudig kon zijn" name="Julie Naessens" meta="Nu 5 jaar consulente" %}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="c-row c-row--lg c-row--alpha">
+    <div class="o-container">
+        {% include components.buttons.html %}
+    </div>
+</div>
 <div class="c-row c-row--intro c-row--alpha">
+    <div class="c-bg-image" style="background-image: url('img/jpg/post-9.jpg');"></div>
     <div class="o-container">
-        <div class="u-max-width-md">
-            <h1>Mylène on tour</h1>
-            <p class="u-mb-zeta">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit sunt obcaecati maiores dolore, sint laborum.</p>
-            <p>
-                <a href="#!" class="c-button c-button--lg c-button--alpha">Bekijk dit</a>
-            </p>
-        </div>
-    </div>
-</div>
-<div class="c-row c-row--lg c-row--alpha">
-    <div class="o-container">
-        <div class="o-grid o-grid--gutter">
-            <div class="o-grid__item u-1-of-2-bp3">
-                <a href="#!" class="c-visual">
-                    <div class="c-visual__body">
-                        <p class="c-visual__label">visual</p>
-                        <h2 class="c-visual__title">Organiseer een homeparty</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="o-grid__item u-1-of-2-bp3">
-                <a href="#!" class="c-visual">
-                    <div class="c-visual__body">
-                        <p class="c-visual__label">visual</p>
-                        <h2 class="c-visual__title">Wordt Mylene consulente</h2>
-                    </div>
-                </a>
+        <div class="u-max-width-sm">
+            <div class="c-intro">
+                <div class="c-intro__body u-text-center">
+                    <h1 class="u-color-epsilon-base u-mb-delta">Mylène on tour</h1>
+                    <p class="u-mb-epsilon">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae distinctio temporibus, ullam itaque dolorum tempore. Assumenda aut, exercitationem. Dicta, assumenda dolores veritatis accusantium, quae necessitatibus minima similique vel sit eaque.</p>
+
+                    <p>
+                        <a href="#!" class="c-button c-button--beta-ghost c-button--scale c-button--rounded c-button--lg c-button--alpha">Touch me</a>
+                    </p>
+
+                </div>
             </div>
         </div>
     </div>
 </div>
-<div class="c-row c-row--lg c-row--alpha">
+<div class="c-row c-row--xl c-row--alpha">
+    <div class="c-bg-marble-light"></div>
+
     <div class="o-container">
-        {% include atom.quote.html text="Nooit gedacht dat mijn eigen zaak starten zo eenvoudig kon zijn" name="Julie Naessens" meta="Nu 5 jaar consulente" %}
-    </div>
-</div>
-<div class="c-row c-row--lg c-row--alpha">
-    <div class="o-container">
-        <div class="c-main-section-lg">
-            <h2 class="u-text-center">Laatste blogberichten</h2>
+        <div class="c-main-section-xl">
+            <h2 class="u-text-center u-ms0 c-type-header-wide u-color-neutral-xxxx-dark">Laatste blogberichten</h2>
         </div>
-        <div class="c-main-section-lg">
+        <div class="c-main-section-xl">
             <div class="o-grid o-grid--gutter o-flex o-flex--wrap">
                 {% for item in site.data.posts limit:3 %}
                     {% include atom.blog-article.html %}
                 {% endfor %}
             </div>
         </div>
+
+        <div class="c-main-section-xl">
+            <div class="u-max-width-sm u-align-horizontal">
+                {% include components.subscribe.html %}
+            </div>
+        </div>
     </div>
 </div>
-<div class="c-row c-row--lg c-row--alpha">
-    <div class="o-container">
-        <div class="u-max-width-md u-align-horizontal">
-            {% include components.subscribe.html %}
+<div class="c-row c-row--xl c-row--alpha">
+    <div class="c-bg-marble-light"></div>
 
-        </div>
+    <div class="o-container">
+        {% include elements.ms.html %}
     </div>
 </div>

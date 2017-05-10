@@ -18,7 +18,7 @@
     appearance: none; /* [1] */
     -webkit-font-smoothing: antialiased; /* [2] */
     -moz-osx-font-smoothing: grayscale; /* [2] */
-    background-color: palette(color-neutral,x-light);
+    background-color: palette(color-neutral,xxxxx-light);
     border-radius: $radius;
     //border: $border-width $border-style palette(color-neutral);
     border: 0;
@@ -29,12 +29,12 @@
     display: block;
     outline: none;
     line-height: normal;
-    box-shadow: 0 0 0 1px palette(color-neutral,light);
+    //box-shadow: 0 0 0 1px rgba(palette(color-neutral,xxxx-dark),.1);
 
     &:focus {
-        color: palette(color-neutral,dark);
+        color: palette(color-neutral,xx-dark);
         border-color: palette(color-alpha);
-        box-shadow: 0 0 2px palette(color-alpha,x-light);
+        //box-shadow: 0 0 2px palette(color-alpha,x-light);
     }
 
     &.has-error {
@@ -42,9 +42,21 @@
 
         &:focus {
             border-color: palette(color-error);
-            box-shadow: 0 0 2px palette(color-error,x-light);
+            //box-shadow: 0 0 2px palette(color-error,x-light);
         }
     }
+}
+
+// shadow
+
+.c-input-text--box-shadow {
+    box-shadow: 0 5px 15px rgba(palette(color-neutral,xxx-dark),.1);
+}
+
+// rounded
+
+.c-input-text--rounded {
+    border-radius: 4rem;
 }
 
 // Input sizes
@@ -59,8 +71,8 @@
 }
 
 .c-input-text--lg {
-    @include padding-lr(1,1);
-    @include input-dimensions($alpha-font-size,1,0,1,1);
+    @include padding-lr($columns-gutter * 1.25,$columns-gutter * 1.25);
+    @include input-dimensions($alpha-font-size,1,0,1.125,1.125);
 }
 
 // Input modifiers

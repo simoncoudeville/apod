@@ -13,7 +13,7 @@ description: 'Mylene.eu'
 # Site navigation
 navigation:
   - title: Homeparty organiseren
-    url: '#!'
+    url: 'homeparty'
   - title: Consulente worden
     url: '#!'
   - title: Blog

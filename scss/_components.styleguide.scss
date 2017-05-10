@@ -4,46 +4,60 @@
     Styleguide specific scaffolding and demo styles
 */
 
-.c-section-title {
-    color: palette(color-neutral);
-    border-bottom: 1px solid palette(color-neutral);
-    @include padding-bottom(1);
-    @include padding-top(1);
-    @include text-dimensions($alpha-font-size,1,2);
-}
-
-.c-scss {
-    display: block;
-    color: palette(color-neutral,dark);
-    background-color: palette(color-neutral,light);
-    border: $border-width $border-style palette(color-neutral);
-    border-radius: $radius;
-    @include margin-tb(0, 1);
-    @include padding-tb(.5, .5);
-    @include padding-lr(1,1);
-}
-
-.c-toggle {
-    background: white;
-    border: 0;
-    outline: 0;
-    color: palette(color-alpha);
-
-    > .c-symbol {
-        position: relative;
-        top: -2px;
-        transition: transform .1s ease-in-out;
-    }
-
-    &.is-toggled > .c-symbol {
-        transform: rotate(90deg);
-    }
-}
-
 .c-swatch {
     width: 100%;
-    height: 60px;
-    box-shadow: 0 0 1px 3px palette(color-neutral,x-light), 0 0 2px 4px palette(color-neutral,light);
+    height: $alpha-line-height * 6rem;
+    position: relative;
+    @include margin-bottom($beta-leading);
+
+    &:after {
+        display: block;
+        //color: rgba(palette(color-neutral,xxxx-dark),.5);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-weight: $delta-font-weight;
+        @include uppercase;
+        @include ms-1;
+        @include padding-lr($columns-gutter);
+        @include padding-tb($alpha-leading/2,$alpha-leading/2);
+    }
+}
+
+// Loop through the different colors in palettes map
+@each $palette, $value in $palettes {
+
+    // Loop through the different shades in colors map
+    @each $shade, $i in $value {
+
+        // Background colors (e.g .u-bgcolor-alpha-base)
+        .c-swatch.u-bg#{$palette}-#{$shade} {
+            &:after {
+                //color: mix();
+                @if (lightness(map-get(map-get($palettes,$palette) ,$shade)) > 50) {
+                    //color: rgba(palette(color-neutral,xxxx-dark),.5); // Lighter backgorund, return dark color
+                    color: mix(map-get(map-get($palettes,$palette) ,$shade),black,40%); // Lighter backgorund, return dark color
+                } @else {
+                    //color: rgba(palette(color-neutral,xxxx-light),.75); // Darker background, return light color
+                    color: mix(map-get(map-get($palettes,$palette) ,$shade),white,20%); // Darker background, return light color
+                }
+                content: '#{map-get(map-get($palettes,$palette) ,$shade)}';
+            }
+        }
+
+    }
+}
+
+.c-swatch--gradient {
+    height: $alpha-line-height * 12rem;
+}
+
+.c-swatch--texture {
+    height: $alpha-line-height * 12rem;
+
+    &:after {
+        display: none;
+    }
 }
 
 .c-swatch-caption {
