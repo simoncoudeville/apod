@@ -21,7 +21,7 @@
         @include padding-tb($alpha-leading * 4,$alpha-leading * 3);
     }
 
-    @include mq(bp5) {
+    @include mq(bp6) {
         @include padding-lr($columns-gutter * 4,$columns-gutter * 4);
     }
 }
@@ -31,7 +31,7 @@
         @include padding-tb($alpha-leading * 4,$alpha-leading * 3);
     }
 
-    @include mq(bp5) {
+    @include mq(bp6) {
         @include padding-lr($columns-gutter * 6,$columns-gutter * 6);
         @include padding-tb($alpha-leading * 6,$alpha-leading * 5);
     }
@@ -98,5 +98,18 @@
     @include mq(bp5) {
         @include padding-tb($alpha-leading * 14,$alpha-leading * 13);
         @include padding-lr($columns-gutter * 4,$columns-gutter * 4);
+    }
+}
+
+.c-row--logo {
+    display: flex;
+    //height: calc(100vh - #{$alpha-leading}rem);
+    align-items: center;
+    justify-content: center;
+
+    @include padding-tb($alpha-leading * 10,$alpha-leading * 9);
+
+    @include mq(bp5) {
+        @include padding-tb($alpha-leading * 20,$alpha-leading * 19);
     }
 }

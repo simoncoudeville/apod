@@ -153,6 +153,7 @@ li {
     position: absolute;
     top: .375rem;
     right: .375rem;
+    //box-shadow: none;
     //top: .625rem;
     //right: .625rem;
     //border-top-left-radius: $radius * 4;
@@ -166,8 +167,10 @@ li {
     bottom: 0;
     left: 0;
     background:  url('../img/textures/15_slab_marble_marquina_black_texture-seamless.jpg') 0 0 repeat;
-    background-size: 500px 500px;
-    opacity: .25;
+    //background:  url('../img/textures/19_slab_marble_black_Sienna_texture-seamless.jpg') 0 0 repeat;
+    //background:  url('../img/textures/30_black_slab_marble_soap_stone_texture-seamless.jpg') 50% 50% repeat;
+    background-size: 750px 750px;
+    opacity: .325;
     //z-index: 1;
 }
 
@@ -177,7 +180,20 @@ li {
     right: 0;
     bottom: 0;
     left: 0;
-    background:  url('../img/textures/5_slab_marble_veined_Carrara_white_texture-seamless.jpg') 0 0 repeat;
+    background:  url('../img/textures/5_slab_marble_veined_Carrara_white_texture-seamless.jpg') 50% 50% repeat;
+    background-size: 750px 750px;
+    opacity: .25;
+    //z-index: 1;
+}
+
+.c-bg-marble-cream {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background:  url('../img/textures/69_slab_marble_botticino_texture-seamless.jpg') 0 0 repeat;
+    //background:  url('../img/textures/28_slab_marble_cream_texture-seamless.png') 0 0 repeat;
     background-size: 500px 500px;
     opacity: .25;
     //z-index: 1;
@@ -236,3 +252,34 @@ li {
             @include padding-lr($columns-gutter * 2);
         }
     }
+
+.c-footer {
+    display: flex;
+    align-items: center;
+
+    .c-logo {
+        margin-left: 0;
+    }
+}
+
+.c-image {
+    background-size: cover;
+    background-position: 50% 50%;
+    @include margin-bottom($alpha-leading);
+}
+
+.c-image--lg {
+    height: $alpha-line-height * 10rem;
+
+    @include mq(bp2) {
+        height: $alpha-line-height * 14rem;
+    }
+
+    @include mq(bp3) {
+        height: $alpha-line-height * 24rem;
+    }
+
+    @include mq(bp5) {
+        height: $alpha-line-height * 28rem;
+    }
+}

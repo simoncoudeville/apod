@@ -10,17 +10,49 @@
  *     Text-indent is set to prevent text from showing on top of the background-image.
  */
 
+$logo-vertical-ratio:     1.052;
+$logo-vertical-height:    $alpha-line-height * 4.5rem;
+$logo-vertical-width:     $logo-vertical-height * $logo-vertical-ratio;
+
+$logo-horizontal-ratio:     4.427;
+$logo-horizontal-height:    $alpha-line-height * 2.5rem;
+$logo-horizontal-width:     $logo-horizontal-height * $logo-horizontal-ratio;
+
+
+$logo-drop-ratio:     0.702;
+$logo-drop-height:    $alpha-line-height * 1.5rem;
+$logo-drop-width:     $logo-drop-height * $logo-drop-ratio;
+
 .c-logo {
     display: block;
-    //width: 157px; /* [1] */
-    //margin-bottom: 0;
-    //background-repeat: no-repeat;
-    //background-position: center;
-    //background-image: url('../img/svg/logo.svg');
-    //text-indent: -99999px; /* [2] */
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -99999px;
+    @include margin-lr($columns-gutter);
+    @include margin-bottom($alpha-leading);
     @include text-dimensions($alpha-font-size,1);
+}
+
+.c-logo--vertical {
+    height: $logo-vertical-height;
+    width: $logo-vertical-width;
+    background-image: url('../img/svg/mylene-logo.svg');
+}
+
+.c-logo--horizontal {
+    height: $logo-horizontal-height;
+    width: $logo-horizontal-width;
+    background-image: url('../img/svg/mylene-logo-horizontal.svg');
+}
+
+.c-logo--drop {
+    height: $logo-drop-height;
+    width: $logo-drop-width;
+    background-image: url('../img/svg/mylene-logo-drop.svg');
 }
 
     .c-logo__link {
         display: block;
+        width: 100%;
+        height: 100%;
     }

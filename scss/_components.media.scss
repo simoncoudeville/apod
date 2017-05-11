@@ -27,7 +27,7 @@
         @include padding-tb($alpha-leading * 1,$alpha-leading * 0);
         @include padding-lr($columns-gutter);
 
-        @include mq(bp2) {
+        @include mq(bp5) {
             @include padding-tb($beta-leading,$alpha-leading);
             @include padding-lr($columns-gutter * 2);
         }
@@ -56,4 +56,16 @@
         background-size: cover;
         background-position: 50% 50%;
         height: $alpha-line-height * 12rem;
+
+        @include mq(bp4) {
+            height: $alpha-line-height * 8rem;
+        }
+
+        @include mq(bp5) {
+            height: $alpha-line-height * 10rem;
+        }
+
+        @include mq(bp6) {
+            height: $alpha-line-height * 12rem;
+        }
     }

@@ -29,3 +29,9 @@
     font-family: $beta-font-family;
     font-weight: $beta-font-weight;
 }
+
+.c-type-lead {
+    //font-family: $beta-font-family;
+    color: palette(color-neutral);
+    @include ms2;
+}

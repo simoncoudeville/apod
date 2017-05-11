@@ -1,7 +1,14 @@
 ---
 layout: collage
 title: Element Collage
+section: home
 ---
+<div class="c-row c-row--logo c-row--alpha">
+    <div class="o-container o-flex o-flex--align-center">
+        {% include components.logo.html %}
+        {% include components.logo-horizontal.html %}
+    </div>
+</div>
 <div class="c-row c-row--lg c-row--alpha">
     <div class="o-container">
         {% include atoms.colors.html %}
@@ -9,7 +16,7 @@ title: Element Collage
 </div>
 <div class="c-row c-row--lg c-row--alpha">
     <div class="o-container">
-        <div class="c-main-section">
+        <div class="c-main-section-lg">
             <div class="u-max-width-lg u-align-horizontal u-text-center">
                 <h3 class="c-type-header-wide u-ms-1 u-color-neutral-light">Typography</h3>
                 <h1 class="u-color-gamma-light u-ms4 u-ms8-bp3">
@@ -17,18 +24,16 @@ title: Element Collage
                 </h1>
             </div>
         </div>
-        {% comment %}
-        <div class="c-main-section">
+
+        <div class="c-main-section-lg">
             <div class="u-max-width-xl u-align-horizontal">
-                <p>
-                    <img src="img/jpg/post-8.jpg" alt="">
-                </p>
+                <div class="c-image c-image--lg" style="background-image: url('img/jpg/post-8.jpg');"></div>
             </div>
         </div>
-        {% endcomment %}
-        <div class="c-main-section">
+
+        <div class="c-main-section-lg">
             <div class="u-max-width-md u-align-horizontal s-content">
-                <p class="u-ms1 u-color-neutral-base">
+                <p class="c-type-lead">
                     Kunnen je handen wel wat extra aandacht gebruiken in deze tijd van het jaar? Dat komt dan goed uit,  want onze handverzorgingscollectie is geheel vernieuwd en uitgebreid met een paar nieuwe producten. In deze blog lees je hoe je je hardwerkende handen kunt verwennen met je favoriete Rituals.
                 </p>
                 <h2>
@@ -48,14 +53,14 @@ title: Element Collage
                 </p>
             </div>
         </div>
-        <div class="c-main-section">
+        <div class="c-main-section-lg">
             <div class="u-max-width-md u-align-horizontal">
-                {% include atom.quote.html text="Nooit gedacht dat mijn eigen zaak starten zo eenvoudig kon zijn" name="Julie Naessens" meta="Nu 5 jaar consulente" %}
+                {% include atom.quote.html text="Nooit gedacht dat mijn eigen zaak starten zo eenvoudig kon zijn" name="Julie Naessens" meta="Al 5 jaar consulente" %}
             </div>
         </div>
     </div>
 </div>
-<div class="c-row c-row--lg c-row--alpha">
+<div class="c-row c-row--intro c-row--alpha">
     <div class="o-container">
         {% include components.buttons.html %}
     </div>
@@ -70,7 +75,7 @@ title: Element Collage
                     <p class="u-mb-epsilon">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae distinctio temporibus, ullam itaque dolorum tempore. Assumenda aut, exercitationem. Dicta, assumenda dolores veritatis accusantium, quae necessitatibus minima similique vel sit eaque.</p>
 
                     <p>
-                        <a href="#!" class="c-button c-button--beta-ghost c-button--scale c-button--rounded c-button--lg c-button--alpha">Touch me</a>
+                        <a href="#!" class="c-button c-button--gradient c-button--gradient-1 c-button--scale c-button--lg">Touch me</a>
                     </p>
 
                 </div>

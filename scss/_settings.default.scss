@@ -180,6 +180,8 @@ $beta-leading                       : $alpha-line-height * 1.5 !default;
 // UI
 // ---
 
+$radius-lg                          : 8px !default;
+$radius-md                          : 4px !default;
 $radius                             : 2px !default;
 $border-width                       : 1px !default;
 $border-style                       : solid !default;
@@ -286,7 +288,7 @@ $h1-font-family                     : $beta-font-family !default;
 $h1-font-weight                     : $beta-font-weight !default;
 $h1-font-size                       : $ms6 !default;
 $h1-line-height                     : 2 !default;
-$h1-margin-bottom                   : $beta-leading !default;
+$h1-margin-bottom                   : $alpha-leading !default;
 
 $h2-font-family                     : $alpha-font-family !default;
 $h2-font-weight                     : $gamma-font-weight !default;
