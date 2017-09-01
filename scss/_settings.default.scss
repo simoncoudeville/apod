@@ -42,18 +42,14 @@
 }
 
 // Base colors
-$color-alpha                        : #D59F00 !default;
-$color-beta                         : #00bcb4 !default;
-$color-gamma                        : #E6830B !default;
-$color-delta                        : #98B837 !default;
-$color-epsilon                      : #E65E67 !default;
-$color-jota                         : #3e8ede !default;
+$color-alpha                        : rgb(252,61,33) !default;
+$color-beta                         : rgb(11,61,145) !default;
 
 $color-error                        : #FF4136 !default;
 $color-success                      : #2ECC40 !default;
 $color-notice                       : #FF851B !default;
 
-$color-neutral                      : hsl(hue($color-beta),2.5,50) !default;
+$color-neutral                      : hsl(hue($color-beta),7.5,50) !default;
 
 // Palettes
 $palettes: (
@@ -85,34 +81,6 @@ $palettes: (
         light                       : mix($color-beta,white,80%),
         base                        : $color-beta,
         dark                        : mix($color-beta,black,60%),
-    ),
-    color-gamma: (
-        xxx-light                   : mix($color-gamma,white,20%),
-        xx-light                    : mix($color-gamma,white,40%),
-        x-light                     : mix($color-gamma,white,60%),
-        light                       : mix($color-gamma,white,80%),
-        base                        : $color-gamma
-    ),
-    color-delta: (
-        xxx-light                   : mix($color-delta,white,20%),
-        xx-light                    : mix($color-delta,white,40%),
-        x-light                     : mix($color-delta,white,60%),
-        light                       : mix($color-delta,white,80%),
-        base                        : $color-delta
-    ),
-    color-epsilon: (
-        xxx-light                   : mix($color-epsilon,white,20%),
-        xx-light                    : mix($color-epsilon,white,40%),
-        x-light                     : mix($color-epsilon,white,60%),
-        light                       : mix($color-epsilon,white,80%),
-        base                        : $color-epsilon
-    ),
-    color-jota: (
-        xxx-light                   : mix($color-jota,white,20%),
-        xx-light                    : mix($color-jota,white,40%),
-        x-light                     : mix($color-jota,white,60%),
-        light                       : mix($color-jota,white,80%),
-        base                        : $color-jota
     ),
     color-error: (
         light                       : hsl(hue($color-error),70,60),
@@ -161,7 +129,7 @@ $ms13                               : 100 !default;
 // Font settings
 // ---
 
-$alpha-font-family                  : 'Avenir W01', sans-serif !default;
+$alpha-font-family                  : 'acumin-pro', sans-serif !default;
 $beta-font-family                   : 'ITC American Typewriter W01', serif !default;
 
 $alpha-font-size                    : $ms0 !default;

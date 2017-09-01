@@ -34,12 +34,12 @@
         .c-swatch.u-bg#{$palette}-#{$shade} {
             &:after {
                 //color: mix();
-                @if (lightness(map-get(map-get($palettes,$palette) ,$shade)) > 50) {
+                @if (lightness(map-get(map-get($palettes,$palette) ,$shade)) > 60) {
                     //color: rgba(palette(color-neutral,xxxx-dark),.5); // Lighter backgorund, return dark color
-                    color: mix(map-get(map-get($palettes,$palette) ,$shade),black,40%); // Lighter backgorund, return dark color
+                    color: mix(map-get(map-get($palettes,$palette) ,$shade),black,0%); // Lighter backgorund, return dark color
                 } @else {
                     //color: rgba(palette(color-neutral,xxxx-light),.75); // Darker background, return light color
-                    color: mix(map-get(map-get($palettes,$palette) ,$shade),white,20%); // Darker background, return light color
+                    color: mix(map-get(map-get($palettes,$palette) ,$shade),white,0%); // Darker background, return light color
                 }
                 content: '#{map-get(map-get($palettes,$palette) ,$shade)}';
             }

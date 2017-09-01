@@ -63,9 +63,9 @@
 @import 'components.row';
 @import 'components.icons';
 @import 'components.alerts';
-@import 'components.quotes';
+//@import 'components.quotes';
 @import 'components.media';
-@import 'components.buttons';
+//@import 'components.buttons';
 @import 'components.input';
 @import 'components.label';
 @import 'components.lists';
@@ -93,7 +93,7 @@
 @import '../vendor/chopstick-sass/scss/utilities.print';
 @import '../vendor/chopstick-sass/scss/utilities.debug';
 @import 'utilities.ms';
-@import 'utilities.gradients';
+//@import 'utilities.gradients';
 
 /* Nasty, hacky, quick-fix CSS: http://csswizardry.com/2013/04/shame-css/ */
 @import 'shame';
