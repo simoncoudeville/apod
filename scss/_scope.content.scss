@@ -12,7 +12,7 @@
     }
 
     h3 {
-        //@include uppercase;
+        @include uppercase;
     }
 
     * + h2 {
@@ -22,14 +22,4 @@
     a {
         text-decoration: underline;
     }
-
-    //h1,
-    //h2,
-    //h3 {
-    //    color: palette(color-neutral,xx-dark);
-    //}
-    //
-    //h3 {
-    //    @include uppercase;
-    //}
 }

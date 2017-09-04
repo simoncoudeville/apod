@@ -6,7 +6,7 @@
 
 .c-swatch {
     width: 100%;
-    height: $alpha-line-height * 6rem;
+    height: $alpha-line-height * 6px;
     position: relative;
     @include margin-bottom($beta-leading);
 
@@ -17,10 +17,11 @@
         bottom: 0;
         left: 0;
         font-weight: $delta-font-weight;
+        white-space: pre;
         @include uppercase;
         @include ms-1;
         @include padding-lr($columns-gutter);
-        @include padding-tb($alpha-leading/2,$alpha-leading/2);
+        @include padding-tb($alpha-line-height/2,$alpha-line-height/2);
     }
 }
 
@@ -41,7 +42,7 @@
                     //color: rgba(palette(color-neutral,xxxx-light),.75); // Darker background, return light color
                     color: mix(map-get(map-get($palettes,$palette) ,$shade),white,0%); // Darker background, return light color
                 }
-                content: '#{map-get(map-get($palettes,$palette) ,$shade)}';
+                content: '#{$shade} \A #{map-get(map-get($palettes,$palette) ,$shade)}';
             }
         }
 

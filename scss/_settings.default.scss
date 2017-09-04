@@ -68,19 +68,18 @@ $palettes: (
         xxxx-dark                   : hsl(hue($color-neutral),saturation($color-neutral),5)
     ),
     color-alpha: (
-        xxx-light                   : mix($color-alpha,white,20%),
-        xx-light                    : mix($color-alpha,white,40%),
-        x-light                     : mix($color-alpha,white,60%),
-        light                       : mix($color-alpha,white,80%),
-        base                        : $color-alpha
+        x-light                     : hsl(hue($color-alpha),saturation($color-alpha),lightness($color-alpha) + 20),
+        light                       : hsl(hue($color-alpha),saturation($color-alpha),lightness($color-alpha) + 10),
+        base                        : $color-alpha,
+        dark                        : hsl(hue($color-alpha),saturation($color-alpha),lightness($color-alpha) - 10),
+        x-dark                      : hsl(hue($color-alpha),saturation($color-alpha),lightness($color-alpha) - 20),
     ),
     color-beta: (
-        xxx-light                   : mix($color-beta,white,20%),
-        xx-light                    : mix($color-beta,white,40%),
-        x-light                     : mix($color-beta,white,60%),
-        light                       : mix($color-beta,white,80%),
+        x-light                     : hsl(hue($color-beta),saturation($color-beta),lightness($color-beta) + 20),
+        light                       : hsl(hue($color-beta),saturation($color-beta),lightness($color-beta) + 10),
         base                        : $color-beta,
-        dark                        : mix($color-beta,black,60%),
+        dark                        : hsl(hue($color-beta),saturation($color-beta),lightness($color-beta) - 10),
+        x-dark                      : hsl(hue($color-beta),saturation($color-beta),lightness($color-beta) - 20),
     ),
     color-error: (
         light                       : hsl(hue($color-error),70,60),
@@ -130,16 +129,16 @@ $ms13                               : 100 !default;
 // ---
 
 $alpha-font-family                  : 'acumin-pro', sans-serif !default;
-$beta-font-family                   : 'ITC American Typewriter W01', serif !default;
+$beta-font-family                   : 'acumin-pro-semi-condensed', serif !default;
 
-$alpha-font-size                    : $ms0 !default;
+$alpha-font-size                    : $ms1 !default;
 
-$alpha-font-weight                  : 200 !default;
-$beta-font-weight                   : 400 !default;
-$gamma-font-weight                  : 700 !default;
-$delta-font-weight                  : 800 !default;
+$alpha-font-weight                  : 400 !default;
+$beta-font-weight                   : 500 !default;
+$gamma-font-weight                  : 600 !default;
+$delta-font-weight                  : 700 !default;
 
-$alpha-line-height                  : 1.5 !default;
+$alpha-line-height                  : 28 !default;
 
 $alpha-leading                      : $alpha-line-height * .75 !default;
 $beta-leading                       : $alpha-line-height * 1.5 !default;
@@ -227,8 +226,8 @@ $animation-easing-beta              : cubic-bezier(.68, -.55, .265, 1.55) !defau
 // Page
 // ---
 
-$html-font-family                   : $alpha-font-family !default;
-$html-font-weight                   : $beta-font-weight !default;
+$html-font-family                   : $beta-font-family !default;
+$html-font-weight                   : $alpha-font-weight !default;
 $html-font-size                     : $alpha-font-size !default;
 $html-line-height                   : $alpha-line-height !default;
 
@@ -237,12 +236,13 @@ $html-responsive-font-breakpoint    : bp5 !default;
 $html-responsive-font-magnification : 112.5% !default;
 
 $html-background-color              : palette(color-neutral,dark) !default;
-$body-color                         : palette(color-neutral,x-dark) !default;
+$body-color                         : palette(color-neutral,xx-dark) !default;
 
 $body-font-smoothing                : true !default;
 
-$body-selection-background-color    : palette(color-alpha,xxx-light) !default;
-$body-selection-color               : palette(color-neutral,xxxx-dark) !default;
+$change-selection-color             : false !default;
+$body-selection-background-color    : rgba(palette(color-alpha),.1) !default;
+$body-selection-color               : $body-color !default;
 $body-selection-text-shadow         : none !default;
 
 // ---
@@ -253,14 +253,14 @@ $body-selection-text-shadow         : none !default;
 $show-baseline: false;
 
 $h1-font-family                     : $beta-font-family !default;
-$h1-font-weight                     : $beta-font-weight !default;
-$h1-font-size                       : $ms6 !default;
+$h1-font-weight                     : $delta-font-weight !default;
+$h1-font-size                       : $ms8 !default;
 $h1-line-height                     : 2 !default;
 $h1-margin-bottom                   : $alpha-leading !default;
 
-$h2-font-family                     : $alpha-font-family !default;
-$h2-font-weight                     : $gamma-font-weight !default;
-$h2-font-size                       : $ms3 !default;
+$h2-font-family                     : $beta-font-family !default;
+$h2-font-weight                     : $delta-font-weight !default;
+$h2-font-size                       : $ms4 !default;
 $h2-line-height                     : 1.25 !default;
 $h2-margin-bottom                   : $alpha-leading !default;
 
@@ -314,10 +314,10 @@ $link-transition                    : all $animation-duration-alpha $animation-e
 $link-decoration                    : none !default;
 $link-decoration--hover             : underline !default;
 
-$link-color                         : palette(color-beta) !default;
-$link-color--visited                : palette(color-beta) !default;
+$link-color                         : palette(color-beta,x-light) !default;
+$link-color--visited                : palette(color-alpha) !default;
 $link-color--hover                  : palette(color-beta,light) !default;
-$link-color--focus                  : palette(color-beta,light) !default;
+$link-color--focus                  : palette(color-alpha) !default;
 
 $link-outline                       : 0 !default;
 $link-outline--focus                : thin dotted !default;

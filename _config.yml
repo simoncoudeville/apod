@@ -6,24 +6,16 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Meta data
-title: 'Mylene'
+title: 'Astronomy Picture of the Day'
 author: ''
-description: 'Mylene.eu'
+description: 'Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer.'
 
 # Site navigation
 navigation:
-  - title: Homeparty organiseren
-    url: 'homeparty'
-  - title: Consulente worden
-    url: '#!'
-  - title: Blog
-    url: '#!'
-  - title: Evenementen
-    url: '#!'
-  - title: Over Mylene
-    url: '#!'
-  - title: Contact
-    url: '#!'
+  - title: Explore
+    url: 'explore'
+  - title: About
+    url: 'about'
 
 # Jekyll settings
 permalink: pretty

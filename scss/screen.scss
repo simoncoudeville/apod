@@ -27,9 +27,10 @@
 // Tools
 @import '../vendor/chopstick-sass/scss/tools.functions';
 @import '../vendor/chopstick-sass/scss/tools.mixins';
-@import '../vendor/chopstick-sass/scss/tools.spacing';
+//@import '../vendor/chopstick-sass/scss/tools.spacing';
 //@import '../vendor/chopstick-sass/scss/tools.typography';
 @import 'tools.typography';
+@import 'tools.spacing';
 @import 'tools.mixins';
 @import 'tools.ms';
 
@@ -39,8 +40,10 @@
 @import '../vendor/chopstick-sass/scss/generic.box-sizing';
 
 /* Elements */
-@import '../vendor/chopstick-sass/scss/elements.page';
-@import '../vendor/chopstick-sass/scss/elements.typography';
+//@import '../vendor/chopstick-sass/scss/elements.page';
+@import 'scss/elements.page';
+//@import '../vendor/chopstick-sass/scss/elements.typography';
+@import 'scss/elements.typography';
 @import '../vendor/chopstick-sass/scss/elements.images';
 @import '../vendor/chopstick-sass/scss/elements.forms';
 @import '../vendor/chopstick-sass/scss/elements.tables';
