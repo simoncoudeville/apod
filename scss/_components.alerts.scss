@@ -80,7 +80,7 @@
 .c-alert-inline {
     display: block;
     text-align: right;
-    @include text-dimensions($ms-2,1);
+    @include text-dimensions(ms(-2),1);
 }
 
 .c-alert-inline--error {

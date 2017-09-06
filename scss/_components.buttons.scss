@@ -94,13 +94,13 @@
 .c-button--md {
     border-radius: $radius-md;
     @include padding-lr($columns-gutter * 1.3,$columns-gutter * 1.2);
-    @include input-dimensions($ms-1,1,0,.8,.7);
+    @include input-dimensions(ms(-1),1,0,.8,.7);
 }
 
 .c-button--lg {
     border-radius: $radius-lg;
     @include padding-lr($columns-gutter * 2,$columns-gutter * 2);
-    @include input-dimensions($ms-1,1,0,$alpha-leading * 1.05,$alpha-leading * 0.95);
+    @include input-dimensions(ms(-1),1,0,$alpha-leading * 1.05,$alpha-leading * 0.95);
 }
 
 // Button colors

@@ -14,35 +14,35 @@ h1 {
 h2 {
     font-family: $h2-font-family;
     font-weight: $h2-font-weight;
-    @include ms1;
+    @include ms0;
     @include margin-bottom($h2-margin-bottom);
 }
 
 h3 {
     font-family: $h3-font-family;
     font-weight: $h3-font-weight;
-    @include text-dimensions($h3-font-size,$h3-line-height);
+    @include ms0;
     @include margin-bottom($h3-margin-bottom);
 }
 
 h4 {
     font-family: $h4-font-family;
     font-weight: $h4-font-weight;
-    @include text-dimensions($h4-font-size,$h4-line-height);
+    @include ms0;
     @include margin-bottom($h4-margin-bottom);
 }
 
 h5 {
     font-family: $h5-font-family;
     font-weight: $h5-font-weight;
-    @include text-dimensions($h5-font-size,$h5-line-height);
+    @include ms0;
     @include margin-bottom($h5-margin-bottom);
 }
 
 h6 {
     font-family: $h6-font-family;
     font-weight: $h6-font-weight;
-    @include text-dimensions($h6-font-size,$h6-line-height);
+    @include ms0;
     @include margin-bottom($h6-margin-bottom);
 }
 
@@ -52,7 +52,7 @@ ul,
 dl,
 table,
 address {
-    @include text-dimensions($base-font-size,$base-line-height);
+    @include ms0;
     @include margin-bottom($base-margin-bottom);
 }
 

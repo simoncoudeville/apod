@@ -119,7 +119,7 @@
         display: block;
         color: palette(color-alpha);
         text-decoration: none;
-        @include text-dimensions($ms-1,1);
+        @include text-dimensions(ms(-1),1);
 
         &:hover,
         .is-selected & {
@@ -157,7 +157,7 @@
         color: palette(color-alpha);
         text-decoration: none;
         //text-transform: uppercase;
-        @include text-dimensions($ms-1,1);
+        @include text-dimensions(ms(-1),1);
 
         &:hover,
         .is-selected & {

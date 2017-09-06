@@ -306,3 +306,13 @@ li {
         }
     }
 }
+
+.c-ms-example {
+
+    &:before {
+        content: attr(data-ms);
+        display: block;
+        font-size: 16px;
+        line-height: $alpha-line-height * 1px;
+    }
+}
