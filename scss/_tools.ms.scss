@@ -37,7 +37,7 @@
 }
 
 @mixin ms5 {
-    @include text-dimensions(ms(5),1.25);
+    @include text-dimensions(ms(5),1.5);
 }
 
 @mixin ms6 {

@@ -3,24 +3,19 @@
 */
 
 .u-ms-3 {
-    //@include text-dimensions($ms-3,1);
     @include ms-3;
 }
 
 .u-ms-2 {
-    //@include text-dimensions($ms-2,1);
     @include ms-2;
 }
 
 .u-ms-1 {
-    //@include text-dimensions(ms(-1),1);
     @include ms-1;
 }
 
 .u-ms0 {
     @include ms0;
-    //font-size: ms(3);
-    //line-height: $alpha-line-height * 1.5px;
 }
 
 .u-ms1 {
