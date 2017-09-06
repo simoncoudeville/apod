@@ -62,7 +62,7 @@ li {
 }
 
 .u-max-width-md {
-    max-width: 38em;
+    max-width: 36em;
 }
 
 .u-max-width-lg {
@@ -281,5 +281,28 @@ li {
 
     @include mq(bp5) {
         height: $alpha-line-height * 28rem;
+    }
+}
+
+.c-featured {
+    @include mq(bp4){
+        //max-height: calc(100vh - #{$alpha-line-height * 6.75}px);
+        max-height: calc(100vh - #{$alpha-line-height * 7.75}px);
+        //max-height: calc(100vh - #{$alpha-line-height * 4}px);
+        //max-height: calc(100vh - #{$alpha-line-height * 3.75}px);
+        //max-width: calc(100vh - #{$columns-gutter * 1}px);
+        //max-width: map-get($breakpoints,bp4);
+    }
+    //max-height: calc(100vh - #{$alpha-line-height * 4.25}px);
+
+    //max-height: calc(100vh - #{$alpha-line-height * 6.25}px);
+    //max-height: #{$alpha-leading * 30}px;
+}
+
+.c-section-lg {
+    @include mq(bp3) {
+        & +  & {
+            @include padding-top($alpha-leading);
+        }
     }
 }

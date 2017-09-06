@@ -7,22 +7,20 @@
 .c-row {
     position: relative;
     @include padding-tb($alpha-leading,0);
-    @include padding-lr($columns-gutter,$columns-gutter);
+    @include padding-lr($columns-gutter / 2,$columns-gutter / 2);
     @include clearfix;
 
-    @include mq(bp2) {
-        @include padding-lr($columns-gutter * 2,$columns-gutter * 2);
-        @include padding-tb($alpha-leading * 2,$alpha-leading);
+    @include mq(bp1) {
+        @include padding-lr($columns-gutter,$columns-gutter);
+        //@include padding-lr($columns-gutter * 2,$columns-gutter * 2);
+        //@include padding-tb($alpha-leading * 2,$alpha-leading);
     }
 }
 
 .c-row--lg {
     @include mq(bp3) {
-        @include padding-tb($alpha-leading * 4,$alpha-leading * 3);
-    }
-
-    @include mq(bp6) {
-        @include padding-lr($columns-gutter * 4,$columns-gutter * 4);
+        @include padding-tb($alpha-line-height * 2,$alpha-line-height * 1.25);
+        @include padding-lr($columns-gutter * 2,$columns-gutter * 2);
     }
 }
 
@@ -39,77 +37,31 @@
 
 .c-row--alpha {
     background-color: palette(color-neutral,xxxxx-light);
-
-    & + & {
-        &:before {
-            content: '';
-            display: block;
-            position: absolute;
-            top: 0;
-            right: 0;
-            left: 0;
-            height: 1px;
-            background-color: rgba(palette(color-neutral,xxxx-dark),.075);
-        }
-    }
 }
 
 .c-row--beta {
-    background-color: palette(color-neutral,xxx-dark);
+    //background-color: palette(color-neutral,xx-dark);
     color: palette(color-neutral,xxx-light);
 }
 
-.c-row--gamma {
-    background-color: palette(color-neutral,xxxx-light);
-}
-
-.c-row--marble {
-    background: #fff url('../img/textures/5_slab_marble_veined_Carrara_white_texture-seamless-light.jpg') 0 0 repeat;
-    background-size: 650px 465px;
-}
-
-.c-row--top {
-    background-color: palette(color-neutral,light);
-    z-index: 30;
-    @include padding-tb($alpha-leading / 2, $alpha-leading / 2);
-
-    @include mq(bp5) {
-        @include padding-lr($columns-gutter * 4,$columns-gutter * 4);
-    }
+.c-row--featured {
+    z-index: 10;
+    @include margin-top($alpha-leading * -1);
 }
 
 .c-row--header {
-    background-color: palette(color-neutral,x-light);
-    //box-shadow: 0 0 50px rgba(palette(color-neutral,x-dark),.1);
     z-index: 20;
-    @include mq(bp2) {
-        @include padding-tb($alpha-leading * 2,$alpha-leading);
-    }
-
-    @include mq(bp5) {
-        @include padding-lr($columns-gutter * 4,$columns-gutter * 4);
-    }
+    //background-color: palette(color-neutral);
 }
 
-.c-row--intro {
-    z-index: 10;
-    @include padding-tb($alpha-leading * 10,$alpha-leading * 9);
-
-    @include mq(bp5) {
-        @include padding-tb($alpha-leading * 14,$alpha-leading * 13);
-        @include padding-lr($columns-gutter * 4,$columns-gutter * 4);
-    }
+.c-row--clear {
+    padding: 0;
 }
 
-.c-row--logo {
-    display: flex;
-    //height: calc(100vh - #{$alpha-leading}rem);
-    align-items: center;
-    justify-content: center;
+.c-row--clear-top {
+    padding-top: 0;
+}
 
-    @include padding-tb($alpha-leading * 10,$alpha-leading * 9);
-
-    @include mq(bp5) {
-        @include padding-tb($alpha-leading * 20,$alpha-leading * 19);
-    }
+.c-row--clear-bottom {
+    padding-bottom: 0;
 }

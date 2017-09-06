@@ -63,7 +63,7 @@ $palettes: (
         base                        : $color-neutral,
         dark                        : hsl(hue($color-neutral),saturation($color-neutral),40),
         x-dark                      : hsl(hue($color-neutral),saturation($color-neutral),30),
-        xx-dark                     : hsl(hue($color-neutral),saturation($color-neutral),20),
+        xx-dark                     : hsl(hue($color-neutral),saturation($color-neutral),15),
         xxx-dark                    : hsl(hue($color-neutral),saturation($color-neutral),10),
         xxxx-dark                   : hsl(hue($color-neutral),saturation($color-neutral),5)
     ),
@@ -130,6 +130,7 @@ $ms13                               : 100 !default;
 
 $alpha-font-family                  : 'acumin-pro', sans-serif !default;
 $beta-font-family                   : 'acumin-pro-semi-condensed', serif !default;
+$gamma-font-family                  : 'alverata', serif !default;
 
 $alpha-font-size                    : $ms1 !default;
 
@@ -137,11 +138,12 @@ $alpha-font-weight                  : 400 !default;
 $beta-font-weight                   : 500 !default;
 $gamma-font-weight                  : 600 !default;
 $delta-font-weight                  : 700 !default;
+$jota-font-weight                   : 900 !default;
 
 $alpha-line-height                  : 28 !default;
 
-$alpha-leading                      : $alpha-line-height * .75 !default;
-$beta-leading                       : $alpha-line-height * 1.5 !default;
+$alpha-leading                      : $alpha-line-height * 1 !default;
+$beta-leading                       : $alpha-line-height * 2 !default;
 
 // ---
 // UI
@@ -171,7 +173,7 @@ $z-indexes: (
 // ---
 
 $breakpoints: (
-    bp1                             : 320/16*1em,
+    bp1                             : 321/16*1em,
     bp2                             : 480/16*1em,
     bp3                             : 680/16*1em,
     bp4                             : 960/16*1em,
@@ -235,7 +237,7 @@ $html-responsive-font-size          : false !default;
 $html-responsive-font-breakpoint    : bp5 !default;
 $html-responsive-font-magnification : 112.5% !default;
 
-$html-background-color              : palette(color-neutral,dark) !default;
+$html-background-color              : palette(color-neutral,xx-dark) !default;
 $body-color                         : palette(color-neutral,xx-dark) !default;
 
 $body-font-smoothing                : true !default;
@@ -252,15 +254,15 @@ $body-selection-text-shadow         : none !default;
 // set to false to hide the baseline and backround
 $show-baseline: false;
 
-$h1-font-family                     : $beta-font-family !default;
-$h1-font-weight                     : $delta-font-weight !default;
-$h1-font-size                       : $ms8 !default;
+$h1-font-family                     : $gamma-font-family !default;
+$h1-font-weight                     : $jota-font-weight !default;
+$h1-font-size                       : ms8 !default;
 $h1-line-height                     : 2 !default;
 $h1-margin-bottom                   : $alpha-leading !default;
 
-$h2-font-family                     : $beta-font-family !default;
-$h2-font-weight                     : $delta-font-weight !default;
-$h2-font-size                       : $ms4 !default;
+$h2-font-family                     : $gamma-font-family !default;
+$h2-font-weight                     : $jota-font-weight !default;
+$h2-font-size                       : ms4 !default;
 $h2-line-height                     : 1.25 !default;
 $h2-margin-bottom                   : $alpha-leading !default;
 

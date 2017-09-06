@@ -7,14 +7,14 @@
 h1 {
     font-family: $h1-font-family;
     font-weight: $h1-font-weight;
-    @include text-dimensions($h1-font-size,$h1-line-height);
+    @include ms6;
     @include margin-bottom($h1-margin-bottom);
 }
 
 h2 {
     font-family: $h2-font-family;
     font-weight: $h2-font-weight;
-    @include text-dimensions($h2-font-size,$h2-line-height);
+    @include ms1;
     @include margin-bottom($h2-margin-bottom);
 }
 
