@@ -285,9 +285,9 @@ li {
 }
 
 .c-featured {
-    @include mq(bp4){
+    @include mq(bp3){
         //max-height: calc(100vh - #{$alpha-line-height * 6.75}px);
-        max-height: calc(100vh - #{$alpha-line-height * 7.75}px);
+        max-height: calc(100vh - #{$alpha-line-height * 8}px);
         //max-height: calc(100vh - #{$alpha-line-height * 4}px);
         //max-height: calc(100vh - #{$alpha-line-height * 3.75}px);
         //max-width: calc(100vh - #{$columns-gutter * 1}px);

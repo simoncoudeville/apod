@@ -1,20 +1,16 @@
-<article class="o-grid__item u-1-of-2-bp3 u-1-of-3-bp4 o-flex">
+<article class="o-grid__item u-1-of-2-bp3 u-1-of-3-bp4 u-1-of-4-bp5 u-1-of-5-bp6 o-flex o-flex--align-end">
     <a class="c-media c-media--link" href="#!">
-
-            <div class="c-media__image" style="background-image: url('{{ item.image }}')">
-            </div>
-
+        <p class="c-media__image u-mb-gamma">
+            <img src="{{ item.image }}" alt="">
+        </p>
         <div class="c-media__body">
-            <p class="c-media__meta u-ms-1 u-color-neutral-base">
+            <p class="u-ms-2 u-color-neutral-base u-mb-beta-neg">
                 {{ item.date }}
             </p>
             <div class="c-media__content">
-                <h2 class="c-media__title u-ms1">
+                <h2 class="c-media__title u-ms-1">
                     {{ item.title }}
                 </h2>
-                <p class="c-media__intro">
-                    {{ item.text }}
-                </p>
             </div>
         </div>
     </a>

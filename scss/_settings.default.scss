@@ -126,7 +126,7 @@ $jota-font-weight                   : 900 !default;
 
 $alpha-line-height                  : 28 !default;
 
-$alpha-leading                      : $alpha-line-height * 1 !default;
+$alpha-leading                      : $alpha-line-height * 1.25 !default;
 $beta-leading                       : $alpha-line-height * 2 !default;
 
 // ---
@@ -236,7 +236,7 @@ $body-selection-text-shadow         : none !default;
 // ---
 
 // set to false to hide the baseline and backround
-$show-baseline: true;
+$show-baseline: false;
 
 $h1-font-family                     : $gamma-font-family !default;
 $h1-font-weight                     : $jota-font-weight !default;
@@ -341,7 +341,7 @@ $caption-padding-bottom             : $alpha-leading !default;
 // Grid
 // ---
 
-$grid-max-width                     : map-get($breakpoints,bp7) !default;
+$grid-max-width                     : map-get($breakpoints,bp5) !default;
 $grid-gutter                        : $columns-gutter !default;
 
 // ---

@@ -13,14 +13,14 @@
     @include mq(bp1) {
         @include padding-lr($columns-gutter,$columns-gutter);
         //@include padding-lr($columns-gutter * 2,$columns-gutter * 2);
-        //@include padding-tb($alpha-leading * 2,$alpha-leading);
+        //@include padding-tb($alpha-leading * 1.25,$alpha-leading * .25);
     }
 }
 
 .c-row--lg {
     @include mq(bp3) {
-        @include padding-tb($alpha-line-height * 2,$alpha-line-height * 1.25);
-        @include padding-lr($columns-gutter * 2,$columns-gutter * 2);
+        @include padding-tb($alpha-leading * 2,$alpha-leading * 1);
+        //@include padding-lr($columns-gutter * 2,$columns-gutter * 2);
     }
 }
 
@@ -40,7 +40,7 @@
 }
 
 .c-row--beta {
-    //background-color: palette(color-neutral,xx-dark);
+    background-color: palette(color-neutral,xxxx-dark);
     color: palette(color-neutral,xxx-light);
 }
 

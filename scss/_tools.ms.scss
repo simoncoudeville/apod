@@ -9,11 +9,11 @@
 }
 
 @mixin ms-2 {
-    @include text-dimensions(ms(-2),.75);
+    @include text-dimensions(ms(-2),1);
 }
 
 @mixin ms-1 {
-    @include text-dimensions(ms(-1),.75);
+    @include text-dimensions(ms(-1),1);
 }
 
 @mixin ms0 {

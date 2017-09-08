@@ -5,8 +5,9 @@
 .c-media {
     display: flex;
     flex-direction: column;
-    box-shadow: 0 5px 15px rgba(palette(color-neutral,xxx-dark),.1);
+    justify-content: flex-end;
     transition: all $animation-duration-beta $animation-easing-alpha;
+    width: 100%;
     @include margin-bottom($alpha-leading);
 }
 
@@ -14,27 +15,27 @@
     &:hover,
     &:focus {
         text-decoration: none;
-        transform: scale(1.02) translateY(-8px);
-        box-shadow: 0 16px 20px rgba(palette(color-neutral,xxx-dark),.075);
+        //transform: scale(1.02) translateY(-8px);
     }
 }
 
     .c-media__body {
         background-color: palette(color-neutral,xxxxx-light);
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        @include padding-tb($alpha-leading * 1,$alpha-leading * 0);
-        @include padding-lr($columns-gutter);
+        //display: flex;
+        //flex-direction: column;
+        //flex: 1;
+        //@include padding-tb($alpha-leading * 1,$alpha-leading * 0);
+        //@include padding-lr($columns-gutter);
 
-        @include mq(bp5) {
-            @include padding-tb($beta-leading,$alpha-leading);
-            @include padding-lr($columns-gutter * 2);
-        }
+        //@include mq(bp5) {
+        //    @include padding-tb($beta-leading,$alpha-leading);
+        //    @include padding-lr($columns-gutter * 2);
+        //}
     }
 
     .c-media__content {
         margin-top: auto;
+        overflow: hidden;
     }
 
     .c-media__image-link {
@@ -46,6 +47,18 @@
     }
 
     .c-media__title {
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-family: $alpha-font-family;
+        @include ms0;
+
+        .c-media--link &,
+        .c-media--link:visited & {
+            color: palette(color-neutral,xxxx-dark);
+        }
+
         .c-media--link:hover &,
         .c-media--link:focus & {
             text-decoration: underline;
@@ -53,19 +66,20 @@
     }
 
     .c-media__image {
-        background-size: cover;
-        background-position: 50% 50%;
-        height: $alpha-line-height * 12rem;
-
-        @include mq(bp4) {
-            height: $alpha-line-height * 8rem;
-        }
-
-        @include mq(bp5) {
-            height: $alpha-line-height * 10rem;
-        }
-
-        @include mq(bp6) {
-            height: $alpha-line-height * 12rem;
-        }
+        //flex-grow: 1;
+        //background-size: cover;
+        //background-position: 50% 50%;
+        //height: $alpha-line-height * 12rem;
+        //
+        //@include mq(bp4) {
+        //    height: $alpha-line-height * 8rem;
+        //}
+        //
+        //@include mq(bp5) {
+        //    height: $alpha-line-height * 10rem;
+        //}
+        //
+        //@include mq(bp6) {
+        //    height: $alpha-line-height * 12rem;
+        //}
     }
