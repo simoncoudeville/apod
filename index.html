@@ -4,15 +4,15 @@ title: Element Collage
 section: home
 ---
 <div class="c-row c-row--alpha">
-    <div class="o-container">
+    <div class="o-container u-text-center">
         {% include components.logo.html %}
     </div>
 </div>
-<div class="c-row c-row--clear u-bgcolor-neutral-xxx-light">
+<div class="c-row c-row--clear c-row--alpha">
     <div class="o-container">
         <div class="u-text-center">
             <p class="u-mb-alpha">
-                <img class="c-featured" src="img/jpg/EuropaJupiter_Voyager_2792.jpg" alt="">
+                <img class="c-featured" src="img/jpg/CygnusXzoom_SpitzerWiseSchmidt_1775.jpg" alt="">
             </p>
         </div>
     </div>
@@ -24,10 +24,10 @@ section: home
                 <div class="c-section-lg">
                     <div class="u-text-center">
                         <p class="u-ms-2 u-color-neutral-base u-mb-alpha">
-                            2017 August 29
+                            2017 September 25
                         </p>
                         <h2 class="u-color-neutral-xxxx-dark">
-                            The Heart Nebula in Hydrogen, Oxygen, and Sulfur
+                            Massive Shell-Expelling Star G79.29+0.46
                         </h2>
                     </div>
 
@@ -97,11 +97,14 @@ section: home
 </div>
 <div class="c-row c-row--lg c-row--alpha">
     <div class="o-container">
-        <div class="o-grid o-grid--gutter o-flex o-flex--wrap u-mb-delta-neg">
-                {% for item in site.data.posts %}
-                    {% include atom.blog-article.html %}
-                {% endfor %}
-            </div>
+        <h3>
+            Flexbox Grid test
+        </h3>
+        <div class="o-grid o-grid--gutter o-flex o-flex--wrap o-flex--align-baseline u-mb-delta-neg">
+            {% for item in site.data.posts %}
+                {% include atom.blog-article.html %}
+            {% endfor %}
+        </div>
     </div>
 </div>
 {% comment %}

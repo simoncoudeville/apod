@@ -242,7 +242,7 @@ $h1-font-family                     : $gamma-font-family !default;
 $h1-font-weight                     : $jota-font-weight !default;
 $h1-margin-bottom                   : $alpha-leading !default;
 
-$h2-font-family                     : $gamma-font-family !default;
+$h2-font-family                     : $beta-font-family !default;
 $h2-font-weight                     : $jota-font-weight !default;
 $h2-margin-bottom                   : $alpha-leading !default;
 
@@ -341,7 +341,7 @@ $caption-padding-bottom             : $alpha-leading !default;
 // Grid
 // ---
 
-$grid-max-width                     : map-get($breakpoints,bp5) !default;
+$grid-max-width                     : auto !default;
 $grid-gutter                        : $columns-gutter !default;
 
 // ---

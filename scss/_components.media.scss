@@ -15,22 +15,12 @@
     &:hover,
     &:focus {
         text-decoration: none;
-        //transform: scale(1.02) translateY(-8px);
     }
 }
 
     .c-media__body {
+        flex-grow: 1;
         background-color: palette(color-neutral,xxxxx-light);
-        //display: flex;
-        //flex-direction: column;
-        //flex: 1;
-        //@include padding-tb($alpha-leading * 1,$alpha-leading * 0);
-        //@include padding-lr($columns-gutter);
-
-        //@include mq(bp5) {
-        //    @include padding-tb($beta-leading,$alpha-leading);
-        //    @include padding-lr($columns-gutter * 2);
-        //}
     }
 
     .c-media__content {
@@ -48,10 +38,11 @@
 
     .c-media__title {
         width: 100%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        font-family: $alpha-font-family;
+        //white-space: nowrap;
+        //overflow: hidden;
+        //text-overflow: ellipsis;
+        //font-family: $alpha-font-family;
+        transition: color $animation-duration-alpha $animation-easing-alpha;
         @include ms0;
 
         .c-media--link &,
@@ -61,12 +52,19 @@
 
         .c-media--link:hover &,
         .c-media--link:focus & {
-            text-decoration: underline;
+            //text-decoration: underline;
+            color: $link-color;
         }
     }
 
     .c-media__image {
         //flex-grow: 1;
+        //flex-basis: 0;
+        display: flex;
+        align-items: flex-end;
+        background-color: palette(color-neutral,xxx-light);
+        //background-color: palette(color-beta,x-light);
+        //background-image: linear-gradient(top left, palette(color-neutral,xxxx-light),palette(color-neutral,xxx-light));
         //background-size: cover;
         //background-position: 50% 50%;
         //height: $alpha-line-height * 12rem;
@@ -82,4 +80,16 @@
         //@include mq(bp6) {
         //    height: $alpha-line-height * 12rem;
         //}
+
+        img {
+            transform: translateX(0) translateY(0);
+            will-change: transform,opacity;
+            transition: all $animation-duration-alpha $animation-easing-alpha;
+            //opacity: 0;
+
+            .c-media--link:hover & {
+                transform: translateX(-#{$alpha-leading * .25}px) translateY(-#{$alpha-leading * .25}px);
+                //opacity: .9;
+            }
+        }
     }

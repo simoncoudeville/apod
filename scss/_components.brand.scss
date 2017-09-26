@@ -25,30 +25,10 @@ $logo-drop-width:     $logo-drop-height * $logo-drop-ratio;
 
 .c-logo {
     display: block;
-    background-repeat: no-repeat;
-    background-position: center;
-    text-indent: -99999px;
-    @include margin-lr($columns-gutter);
-    @include margin-bottom($alpha-leading);
-    @include text-dimensions($alpha-font-size,1);
-}
-
-.c-logo--vertical {
-    height: $logo-vertical-height;
-    width: $logo-vertical-width;
-    background-image: url('../img/svg/mylene-logo.svg');
-}
-
-.c-logo--horizontal {
-    height: $logo-horizontal-height;
-    width: $logo-horizontal-width;
-    background-image: url('../img/svg/mylene-logo-horizontal.svg');
-}
-
-.c-logo--drop {
-    height: $logo-drop-height;
-    width: $logo-drop-width;
-    background-image: url('../img/svg/mylene-logo-drop.svg');
+    font-family: $beta-font-family;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    @include ms0;
 }
 
     .c-logo__link {
