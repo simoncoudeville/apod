@@ -25,10 +25,12 @@ $logo-drop-width:     $logo-drop-height * $logo-drop-ratio;
 
 .c-logo {
     display: block;
-    font-family: $beta-font-family;
+    font-family: $delta-font-family;
+    font-weight: $delta-font-weight;
     text-transform: uppercase;
     letter-spacing: 1px;
-    @include ms0;
+    //@include ms0;
+    @include ms-1;
 }
 
     .c-logo__link {
