@@ -3,32 +3,38 @@ layout: collage
 title: Element Collage
 section: home
 ---
-<div class="c-row c-row--alpha">
+<header class="c-row c-row--alpha">
     <div class="o-container u-text-center">
         {% include components.logo.html %}
     </div>
-</div>
-<div class="c-row c-row--clear c-row--alpha">
+</header>
+<section class="c-row c-row--clear c-row--alpha">
     <div class="o-container">
         <div class="c-featured">
-            <p class="c-featured__picture u-mb-alpha">
-                <img class="c-featured__image js-blazy" src="img/jpg/EuropaJupiter_Voyager_2792.jpg" data-src="img/jpg/EuropaJupiter_Voyager_2792.jpg" alt="">
+            <a href="#!" class="c-arrow c-arrow--prev">
+                <svg class="c-arrow__symbol"><use xlink:href="img/svg/symbol-defs.svg#icon-arrow_forward"></use></svg>
+            </a>
+            <p class="c-featured__picture">
+                <img class="c-featured__image js-blazy" src="img/jpg/EuropaJupiter_Voyager_960.jpg" data-src="img/jpg/EuropaJupiter_Voyager_960.jpg" alt="">
             </p>
+            <a href="#!" class="c-arrow c-arrow--next is-inactive">
+                <svg class="c-arrow__symbol"><use xlink:href="img/svg/symbol-defs.svg#icon-arrow_forward"></use></svg>
+            </a>
         </div>
     </div>
-</div>
-<div class="c-row c-row--alpha">
+</section>
+<main class="c-row c-row--alpha">
     <div class="o-container">
         <div class="c-main-section-lg">
             <div class="u-max-width-md u-align-horizontal">
                 <div class="c-section-lg">
                     <div class="u-text-center">
-                        <p class="u-ms-2 u-color-neutral-base u-mb-alpha">
-                            2017 September 25
-                        </p>
-                        <h2 class="u-color-neutral-xxxx-dark">
-                            Massive Shell-Expelling Star G79.29+0.46
+                        <h2 class="u-color-neutral-xxxx-dark u-mb-alpha">
+                            Europa and Jupiter from Voyager 1
                         </h2>
+                        <p class="u-ms-2 u-color-neutral-base">
+                            2017 September 5
+                        </p>
                     </div>
 
                     <div class="s-content">
@@ -94,7 +100,7 @@ section: home
             </div>
         </div>
     </div>
-</div>
+</main>
 <div class="c-row c-row--lg c-row--alpha">
     <div class="o-container">
         <h3>

@@ -38,3 +38,9 @@ $logo-drop-width:     $logo-drop-height * $logo-drop-ratio;
         width: 100%;
         height: 100%;
     }
+
+    .c-logo__hidden {
+        // @include mq(bp2,max) {
+            display: none;
+        // }
+    }
